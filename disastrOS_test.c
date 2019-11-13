@@ -3,6 +3,34 @@
 #include <poll.h>
 
 #include "disastrOS.h"
+//handling errors' codes 
+void sem_errors(int err_code) {
+    //if error code not negative, OK!
+    if (err_code >= 0) {
+        printf("\e[32mSuccess\e[0m\n");
+        return;
+    }
+
+    printf("\e[34m");
+    switch (err_code) {
+        case DSOS_EEXIST:
+             printf("Semaphore already exists\n\n");
+             break;
+        case DSOS_EMFILE:
+             printf("Max num. semaphores exceeded\n\n");
+             break;
+        case DSOS_EINVAL:
+             printf("Invalid semaphore id\n\n");
+             break;
+        case DSOS_ERESOURCEOPEN:
+             printf("Couldn't open semaphore\n\n");
+             break;
+        default:
+             printf("Unknown Error: %d\n\n", err_code);
+             break;
+    }
+    printf("\e[0m");
+}
 
 // we need this to handle the sleep state
 void sleeperFunction(void* args){
