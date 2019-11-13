@@ -13,7 +13,7 @@ extern ListHead ready_list; // list of the ready processes
 extern ListHead waiting_list; // list of the waiting processes
 extern ListHead zombie_list;  // zombies
 extern ListHead resources_list; // resources
-extern semaphores_list; //resource
+extern ListHead semaphores_list; //resource
 //list of used semaphore
 
 
