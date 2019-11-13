@@ -37,14 +37,13 @@
 #define DSOS_ERESOURCENOFD -11
 #define DSOS_ERESOURCECLOSE -12
 #define DSOS_ERESOURCEINUSE -13
-// semaphores errors
-#define DSOS_COUNT_SEM_NEGATIVE -14
-#define DSOS_SEM_NOT_ALLOC -15
-#define DSOS_SEM_DESC_NOT_ALLOC -16
-#define DSOS_SEM_DESC_PTR_NOT_ALLOC -17
-#define DSOS_SEM_DESC_NOT_FOUND -18
-#define DSOS_SEM_NOT_FOUND -19
-#define DSOS_SEM_DESC_PTR_NOT_FOUND -20
+
+// new errors' codes
+
+#define DSOS_EEXIST -14
+#define DSOS_EMFILE -15
+#define DSOS_EINVAL -16
+
 
 // syscall numbers
 #define DSOS_MAX_SYSCALLS 32
