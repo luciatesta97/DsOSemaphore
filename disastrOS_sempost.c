@@ -34,4 +34,7 @@ void internal_semPost(){
         running -> syscall_retvalue =  0;
         return;
     }
+	
+    sem_desc -> semaphore -> count++;
+    running -> syscall_retvalue =  0;
 }
