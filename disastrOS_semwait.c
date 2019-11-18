@@ -36,4 +36,7 @@ void internal_semWait(){
         running -> status = Running;
         return;
     }
+	
+    d -> semaphore -> count--;
+    running -> syscall_retvalue =  0;
 }
